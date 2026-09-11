@@ -1,42 +1,37 @@
 # Global Configuration
 
-## System Environment
+## Environment
 
-- OS: Arch Linux (OmArchy)
-- Shell: Bash
-- Editor: Neovim (no nano available)
-- CLI tools: gh (GitHub CLI)
+- OS: Arch Linux (Omarchy). AUR helper: yay.
+- Editor: Neovim. nano is not installed.
+- Two machines (desktop and laptop) share this setup. A fix applied on one is not on the other.
 
 ## Communication
 
-- Respond to me in Spanish.
-- All code, comments, commit messages, branch names, and documentation must be in English, unless the project is explicitly in Spanish.
-- Keep code comments minimal, following best practices. Only add comments when the intent is not obvious from the code itself.
-- Documentation must be professional in tone and formatting.
-- Never use emojis in code, logs, CLI output, commit messages, or documentation.
+- Respond in Spanish. Be concise. Do not summarize what you did unless asked.
+- Code, comments, commits, branch names, and documentation in English, unless the project is in Spanish.
+- No emojis anywhere: code, logs, CLI output, commits, documentation, or responses.
+- Minimal comments. Only explain intent that the code itself cannot convey: non-obvious decisions, workarounds, or constraints. Never comment what the code does, never add section headers or decorative comments, never leave commented-out code.
+- Documentation: no second person, no marketing language, no exclamation marks.
 
 ## Workflow
 
-- Always ask before acting. Clarify any ambiguity in requirements or implementation details before writing code.
+- Ask only when the ambiguity would lead to materially different implementations. Otherwise state your assumption and proceed.
 - Do not add, remove, or update dependencies without explicit approval.
-- Do not refactor, modify, or touch code outside the scope of the current task.
-- Explore the codebase before implementing changes. Read relevant files first.
+- Do not touch code outside the scope of the current task.
 - Work in small, testable increments.
+- Run the project's linter and tests after every change. Never report a task as done without running them.
 
 ## Git
 
-- Write commit messages in English following Conventional Commits when the project uses it, otherwise follow the project's existing convention.
-- Keep commits focused and atomic. One logical change per commit.
+- Conventional Commits in English when the project uses it, otherwise follow the project's convention.
+- One logical change per commit.
 - Do not commit generated files, build artifacts, or secrets.
+- Never force-push, amend published commits, or run destructive git commands without explicit approval.
 
 ## Code Quality
 
-- Follow the project's existing style, linter, and formatter configuration. Do not override or change them.
-- If no project-level configuration exists, follow the language's community standard practices.
+- Follow the project's linter and formatter configuration. Do not change it.
+- Without project configuration, follow the language's community standard.
 - Prefer readability over cleverness.
-- Handle errors explicitly. Do not silently swallow exceptions.
-
-## Project-Level Overrides
-
-- Always defer to the project's own CLAUDE.md or AGENTS.md for project-specific conventions.
-- When a project-level instruction conflicts with this global config, the project-level instruction wins.
+- Handle errors explicitly. Never silently swallow exceptions.
